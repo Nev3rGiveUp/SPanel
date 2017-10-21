@@ -1,7 +1,10 @@
 /* Included fonts
  * Roboto - 400 Regular, 700 Bold;
+ * Open Sans - 600 Semi-bold;
  */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+@import url('font-awesome.min.css');
 
 /* Removing some default styles */
 * {
@@ -14,26 +17,26 @@ html,
 body {
   height: 100%;
 }
-/* Main navigation on top */
-nav.main {
+/* Main igation on top */
+.main {
   width: 100%;
   height: 50px;
   background: #131D27;
   border-bottom: 3px solid #84d00c;
 }
 
-nav.main ul {
+.main ul {
   width: 100%;
   position: relative;
   text-align: center;
 }
 
-nav.main ul li {
+.main ul li {
   display: inline-block;
   margin-right: -4px;
 }
 
-nav.main ul li a {
+.main ul li a {
   line-height: 50px;
   display: block;
   height: 50px;
@@ -45,7 +48,7 @@ nav.main ul li a {
   transition: 0.2s;
 }
 
-nav.main ul li a:hover {
+.main ul li a:hover {
   background-color: #84d00c;
   padding: 0px 16px 0px 16px;
   font-size: 18px;
@@ -53,19 +56,19 @@ nav.main ul li a:hover {
 }
 
 /* Slider below the menu (first page) */
-div.slides {
+.slides {
   height: 500px;
   background-color: gray;
 }
 
-div.slides div.slide {
+.slides .slide {
   width: 100%;
   height: 500px;
   position: relative;
   overflow: hidden;
 }
 
-div.slides div.slide img.bg {
+.slides .slide .bg {
   width: 100%;
   height: auto;
   pointer-events: none;
@@ -75,11 +78,11 @@ div.slides div.slide img.bg {
   opacity: 0;
 }
 
-div.slides div.slide img.active {
+.slides .slide .active {
   opacity: 1;
 }
 
-div.slides div.slide div.caption {
+.slides .slide .caption {
 	width: 0;
 	height: 0;
 	border-bottom: 250px solid #84d00c;
@@ -91,7 +94,7 @@ div.slides div.slide div.caption {
   transform-origin: left;
 }
 
-div.slides div.slide div.caption span.title {
+.slides .slide .caption .title {
   color: #fff;
   width: 250px;
   font-size: 26px;
@@ -103,7 +106,7 @@ div.slides div.slide div.caption span.title {
 }
 
 
-div.slides div.slide div.caption span.body {
+.slides .slide .caption .body {
   width: 390px;
   color: #fff;
   font-size: 17px;
@@ -112,4 +115,121 @@ div.slides div.slide div.caption span.body {
   position: absolute;
   top: 160px;
   padding: 10px;
+}
+
+.plans {
+  width: 100%;
+  height: 380px;
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+  border-top: 3px solid #84d00c;
+}
+
+.plans .plan {
+  height: 100%;
+  width: 300px;
+  display: inline-block;
+  border: 3px solid #d9d9d9;
+}
+
+.plans .plan:hover {
+  background-color: #f2f2f2;
+}
+
+.plan3 {
+  border: 3px solid #84d00c !important;
+  position: relative;
+}
+
+.plans .plan .price {
+  font-family: 'Open Sans', sans-serif;
+  color: #0066cc;
+}
+
+.plans .plan .title {
+  font-size: 24px;
+  padding: 10px 0 2px 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #0066cc;
+}
+
+.plans .plan3 .title {
+  color: #84d00c !important;
+}
+
+.plans .plan .features {
+  list-style: none;
+  text-align: left;
+  padding: 30px 0 15px;
+}
+
+.plans .plan .features .feature {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0.7;
+  margin-left: 30px;
+  margin-bottom: 12px;
+}
+
+.feature::before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  margin-right: 3px;
+  font-size: 1.3rem;
+  color: #84d00c;
+}
+
+.x::before {
+  content: "\f00d" !important;
+  margin-right: 7px;
+  color: #e60000 !important;
+}
+
+.plan .buy {
+  padding: 9px 16px 9px 16px;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  border: 0;
+  background-color: #0066cc;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.plan .buy:hover {
+  background-color: #333;
+}
+
+.buy-pro {
+  background-color: #84d00c !important;
+}
+
+.buy-pro:hover {
+  background-color: #333 !important;
+}
+
+.plan3 .price {
+  color: #84d00c !important;
+}
+
+.plan3::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 65px 65px 0 0;
+  border-color: #84d00c transparent transparent transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+}
+.plan3::after {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: white;
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  text-shadow: 0 0 2px #84d00c;
+  font-size: 1.4rem;
 }
