@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+
+
+ErrorDocument 404 http://localhost/SPanel/404.html
+
+RewriteEngine on
+RewriteRule order/(.*)/ order.php?product=$1
+RewriteRule order/(.*) order.php?product=$1
